@@ -1,4 +1,12 @@
-year = int(input('Введите любой год григорианского календаря, программа определит високосность и принадлежность к веку: '))
+print('Введите люой год високосного календаря: ')
+flag = True
+while flag:
+    try:
+        year = int(input())
+    except ValueError:
+        print('ошибка')
+    else:
+        flag = False
 if year % 4 != 0:
     print(f'Год {year} является невисокосным годом')
 else:
